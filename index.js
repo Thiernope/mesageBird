@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 const messagebird = require('messagebird')(process.env.MESSAGE_KEY);
-
+console.log(process.env.MESSAGE_KEY)
 //send code to use
 app.post('/sendNumber', (req, res) => {
     const { number  }= req.body
